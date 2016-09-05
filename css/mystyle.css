@@ -1,0 +1,27 @@
+div {
+    display: block;
+}
+#wrapper {
+    width: 700px;
+    height:400px;
+}
+
+#first {
+    float:left;
+    width: 20%;
+    height: 340px;
+    background: red;
+}
+
+#second {
+    float:left;
+    width: 67%;
+    height: 30%;
+    background: green;
+}
+
+#gameDiv {
+    float:left;
+    width: 67%;
+    height: 100%;
+}
