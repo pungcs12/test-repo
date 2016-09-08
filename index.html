@@ -2,13 +2,46 @@
 <html>
 <head>
 	<title>Phaser Full Screen Mobile Example</title>
-
-	<script src="js/phaser.min.js"></script>
-	<script src="src/Boot.js"></script>
-	<script src="src/Preloader.js"></script>
-	<script src="src/MainMenu.js"></script>
-    <script src="src/PlayLotto.js"></script>
-	<script src="src/Game.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1, IE=9">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="robots" content="noindex,nofollow" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-title" content="Phaser App">
+	<meta name="viewport" content="initial-scale=1 maximum-scale=1 user-scalable=0 minimal-ui" />
+<!--	<link rel="apple-touch-icon" href="/apple-touch-icon.png">-->
+	<!-- non-retina iPhone pre iOS 7 -->
+<!--	<link rel="apple-touch-icon" sizes="57x57" href="icons/app_icon_57x57.png">-->
+<!--	<link rel="apple-touch-icon" sizes="60x60" href="icons/app_icon_60x60.png">-->
+	<!-- non-retina iPad pre iOS 7 -->
+<!--	<link rel="apple-touch-icon" sizes="72x72" href="icons/app_icon_72x72.png">-->
+	<!-- non-retina iPad iOS 7 -->
+<!--	<link rel="apple-touch-icon" sizes="76x76" href="icons/app_icon_76x76.png">-->
+	<!-- retina iPhone pre iOS 7 -->
+<!--	<link rel="apple-touch-icon" sizes="114x114" href="icons/app_icon_114x114.png">-->
+	<!-- retina iPhone iOS 7 -->
+<!--	<link rel="apple-touch-icon" sizes="120x120" href="icons/app_icon_120x120.png">-->
+	<!-- retina iPad pre iOS 7 -->
+<!--	<link rel="apple-touch-icon" sizes="144x144" href="icons/app_icon_144x144.png">-->
+	<!-- retina iPad iOS 7 -->
+<!--
+	<link rel="apple-touch-icon" sizes="152x152" href="icons/app_icon_152x152.png">
+	<link rel="apple-touch-icon" sizes="256x256" href="icons/app_icon_256x256.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="icons/app_icon_512x512.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="icons/app_icon_1024x1024.png">
+-->
+	<link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8">
+	<script src="src/lib/phaser.min.js"></script>
+	<script src="src/lib/ScaleManager2.js"></script>
+	<script src="src/game/scene/Boot.js"></script>
+	<script src="src/game/scene/Preloader.js"></script>
+	<script src="src/game/scene/MainMenu.js"></script>
+    <script src="src/game/scene/PlayLotto.js"></script>
+	<script src="src/game/scene/Game.js"></script>
 </head>
 <body>
 
@@ -16,20 +49,111 @@
 	<div id="orientation"></div>
 
 <script type="text/javascript">
+
 (function () {
-	//	Create your Phaser game and inject it into the game div.
-	//	We did it in a window.onload event, but you can do it anywhere (requireJS load, anonymous function, jQuery dom ready, - whatever floats your boat)
-	//	We're using a game size of 1024 x 768 here, but you can use whatever you feel makes sense for your game of course.
-	var game = new Phaser.Game(1024, 768, Phaser.AUTO, 'game');
-	//	Add the States your game has.
-	//	You don't have to do this in the html, it could be done in your Boot state too, but for simplicity I'll keep it here.
+//	//By default we set 
+    //var game = new Phaser.Game(900,600, Phaser.AUTO, 'game');
+	BasicGame.screen = "small";
+	BasicGame.srx = Math.max(window.innerWidth,window.innerHeight);
+	BasicGame.sry = Math.min(window.innerWidth,window.innerHeight);
+	
+	BasicGame.logicWidth = 480;
+	BasicGame.logicHeight = 320;
+	var r = BasicGame.logicWidth/BasicGame.logicHeight;
+    this.TempWidth = 0;
+    this.TempHeight = 0;
+    this.TempFont = 20;
+    this.row1Pos = [];
+    this.row2Pos = [];
+    this.row3Pos = [];
+    this.row4Pos = [];
+    this.row5Pos = [];
+
+	if(BasicGame.srx >= 360){
+		BasicGame.screen = "small";
+		BasicGame.gameWidth = 360;
+		TempWidth = 360;
+        TempHeight = 220;
+        TempFont = 30;
+        row1Pos[0] = "40-25";row1Pos[1] = "40-69";row1Pos[2] = "40-113";row1Pos[3] = "40-157";
+        row2Pos[0] = "110-25";row2Pos[1] = "110-69";row2Pos[2] = "110-113";row2Pos[3] = "110-157";
+        row3Pos[0] = "180-25";row3Pos[1] = "180-69";row3Pos[2] = "180-113";row3Pos[3] = "180-157";
+        row4Pos[0] = "250-25";row4Pos[1] = "250-69";row4Pos[2] = "250-113";row4Pos[3] = "250-157";
+        row5Pos[0] = "320-25";row5Pos[1] = "320-69";row5Pos[2] = "320-113";row5Pos[3] = "320-157";
+	}
+	if(BasicGame.srx >= 480){
+		BasicGame.screen = "normal";
+		TempWidth = 680;
+        TempHeight = 380;
+        TempFont = 50;
+        row1Pos[0] = "76-47";row1Pos[1] = "76-129";row1Pos[2] = "76-211";row1Pos[3] = "76-293";
+        row2Pos[0] = "208-47";row2Pos[1] = "208-129";row2Pos[2] = "208-211";row2Pos[3] = "208-293";
+        row3Pos[0] = "340-47";row3Pos[1] = "340-129";row3Pos[2] = "340-211";row3Pos[3] = "340-293";
+        row4Pos[0] = "472-47";row4Pos[1] = "472-129";row4Pos[2] = "472-211";row4Pos[3] = "472-293";
+        row5Pos[0] = "604-47";row5Pos[1] = "604-129";row5Pos[2] = "604-211";row5Pos[3] = "604-293";
+	}
+	if(BasicGame.srx >= 720){
+		BasicGame.screen = "large";
+		BasicGame.gameWidth = 480;
+        rhOffset = 72;
+	}
+	if(BasicGame.srx >= 960){
+		BasicGame.screen = "xlarge";
+		TempWidth = 680;
+        TempHeight = 480;
+        row1Pos[0] = "75-60";row1Pos[1] = "75-161";row1Pos[2] = "75-264";row1Pos[3] = "75-364";
+        row2Pos[0] = "206-60";row2Pos[1] = "206-161";row2Pos[2] = "206-264";row2Pos[3] = "206-364";
+        row3Pos[0] = "339-60";row3Pos[1] = "339-161";row3Pos[2] = "339-264";row3Pos[3] = "339-364";
+        row4Pos[0] = "472-60";row4Pos[1] = "472-161";row4Pos[2] = "472-264";row4Pos[3] = "472-364";
+        row5Pos[0] = "605-60";row5Pos[1] = "605-161";row5Pos[2] = "605-264";row5Pos[3] = "605-364";
+		//BasicGame.gameWidth = 960;
+		//TempWidth = 680;
+        //TempHeight = 480;
+//        rhOffset = 170;
+//        rwOffset = 280;
+        //TempWidth = 480;
+       // TempHeight = 320;
+	}
+	else if(BasicGame.srx >= 1440){
+		BasicGame.screen = "xxlarge";
+		BasicGame.gameWidth = 1440;
+	}
+	
+	//If on deskop, we may need to fix the maximum resolution instead of scaling the game to the full monitor resolution
+//	var device = new Phaser.Device();
+//	if(device.desktop){
+//		BasicGame.screen = "large";
+//		BasicGame.gameWidth = 720;
+//	}
+//	device = null;
+	
+	
+	//BasicGame.gameHeight = BasicGame.gameWidth/r;
+	//We need these methods later to convert the logical game position to display position, So convertWidth(logicWidth) will be right edge for all screens
+//	BasicGame.convertWidth = function(value){
+//		return value/BasicGame.logicWidth * BasicGame.gameWidth; 
+//	};
+//	BasicGame.convertHeight = function(value){
+//		return value/BasicGame.logicHeight * BasicGame.gameHeight;
+//	};
+	//var game = new Phaser.Game(BasicGame.gameWidth,BasicGame.gameHeight, Phaser.AUTO, 'game');
+    console.log(TempWidth +" "+TempHeight);
+    //var game = new Phaser.Game(BasicGame.gameWidth ,BasicGame.gameHeight, Phaser.AUTO, 'game');
+    var game = new Phaser.Game(TempWidth ,TempHeight, Phaser.AUTO, 'game');
+    //var game = new Phaser.Game(360 ,220, Phaser.AUTO, 'game');
+    
+
+		//Add the States your game has.
+		//You don't have to do this in the html, it could be done in your Boot state too, but for simplicity I'll keep it here.
 	game.state.add('Boot', BasicGame.Boot);
 	game.state.add('Preloader', BasicGame.Preloader);
 	game.state.add('MainMenu', BasicGame.MainMenu);
-    game.state.add('playLotto', BasicGame.PlayLotto);
+    game.state.add('PlayLotto',BasicGame.PlayLotto);
 	game.state.add('Game', BasicGame.Game);
+
 	//	Now start the Boot state.
 	game.state.start('Boot');
+
 })();
 </script>
 
