@@ -65,7 +65,7 @@ Phaser.ScaleManager.prototype.setScreenSize = function (force) {
             		return;
                 }
             }
-            this.setSize();
+            this.setSize2();
             clearInterval(this._check);
             this._check = null;
         }
