@@ -14,12 +14,12 @@ BasicGame.MainMenu.prototype = {
 		//	Here all we're doing is playing some music and adding a picture and button
 		//	Naturally I expect you to do something significantly better :)
 		this.add.sprite(0,0,'bg');
-        
-		
+
+
 		//Aligning HUD to view edges
 		//Align to left top edge
 		//var q = this.add.sprite(BasicGame.viewX,BasicGame.viewY,'playBtn');
-        
+
 //        var SYMTopHatGirl = this.add.sprite(75,55,'SymbolScatter');
 //        SYMTopHatGirl.anchor.setTo(0.5,0.5);
 //        var SYMPic1 = this.add.sprite(75,158,'SymbolScatter');
@@ -28,7 +28,7 @@ BasicGame.MainMenu.prototype = {
 //        SYMScatter.anchor.setTo(0.5,0.5);
 //        var SYMStocking = this.add.sprite(75,364,'SymbolScatter');
 //        SYMStocking.anchor.setTo(0.5,0.5);
-        
+
 //        var SYMTopHatGirl = this.add.sprite(40,25,'SymbolScatter');
 //        SYMTopHatGirl.anchor.setTo(0.5,0.5);
 //        var SYMPic1 = this.add.sprite(40,69,'SymbolScatter');
@@ -37,7 +37,7 @@ BasicGame.MainMenu.prototype = {
 //        SYMScatter.anchor.setTo(0.5,0.5);
 //        var SYMStocking = this.add.sprite(40,157,'SymbolScatter');
 //        SYMStocking.anchor.setTo(0.5,0.5);
-        
+
         var text = this.add.text(TempWidth/2, 0, 'Width:'+BasicGame.srx+ ' '+BasicGame.screen, { font: TempFont+'px Arial', fill: '#ffffff' });
         text.anchor.setTo(0.5, 0.5);
         this.add.tween(text).to({y: TempHeight/2-TempHeight/5}, 2000).easing(Phaser.Easing.Bounce.Out).start();
@@ -47,10 +47,10 @@ BasicGame.MainMenu.prototype = {
         lotto_spin_game.anchor.setTo(0.5, 0.5);
         lotto_spin_game.inputEnabled = true;
         lotto_spin_game.events.onInputUp.add(this.startPlayLotto,this);
-        
+
         var RefTopLayer = this.add.sprite(0,0,'TopLayer');
-//        
-      
+//
+
 //        var SYMTopHatGirl = this.add.sprite(75,55,'SymbolScatter');
 //        SYMTopHatGirl.anchor.setTo(0.5,0.5);
 //        var SYMPic1 = this.add.sprite(75,158,'SymbolScatter');
@@ -59,21 +59,20 @@ BasicGame.MainMenu.prototype = {
 //        SYMScatter.anchor.setTo(0.5,0.5);
 //        var SYMStocking = this.add.sprite(75,364,'SymbolScatter');
 //        SYMStocking.anchor.setTo(0.5,0.5);
-        
-        
+
+
         //q.anchor.setTo(0, 0);
-		
+
 		//Align to bottom right edge
 		//q.position.x = BasicGame.viewWidth - q.width;
 		//q.position.y = BasicGame.viewHeight - q.height;
-        
+
         //q.position.x = 10;
 		//q.position.y = q.height;
 		//q.inputEnabled = true;
 		//q.events.onInputDown.add(this.onClick,this);
 	},
     startPlayLotto: function () {
-        console.log("aaa");
 		//	Ok, the Play Button has been clicked or touched, so let's stop the music (otherwise it'll carry on playing)
 		//this.music.stop();
 

@@ -30,16 +30,16 @@ BasicGame.Boot.prototype = {
 
         this.input.maxPointers = 1;
         this.stage.disableVisibilityChange = true;
-		this.scaleStage();
+		    this.scaleStage();
         this.state.start('Preloader');
 
     },
-    
+
     scaleStage:function(){
      //init:function(){
     	if (this.game.device.desktop)
         {
-            this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL; 
+            this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         }
         else
         {
@@ -50,7 +50,7 @@ BasicGame.Boot.prototype = {
             this.scale.leaveIncorrectOrientation.add(this.leaveIncorrectOrientation, this);
             this.scale.setScreenSize(true);
         }
-        
+
 //        this.scale.minWidth = BasicGame.gameWidth/2;
 //        this.scale.minHeight = BasicGame.gameHeight/2;
 //        this.scale.maxWidth = BasicGame.gameWidth;
@@ -58,7 +58,7 @@ BasicGame.Boot.prototype = {
         this.scale.pageAlignHorizontally = true;
         this.scale.pageAlignVertically = true;
         this.scale.setScreenSize(true);
-        
+
 //		if(this.scale.scaleMode==Phaser.ScaleManager.NO_BORDER){
 //			BasicGame.viewX = (this.scale.width/2 - window.innerWidth/2)*this.scale.scaleFactor.x;
 //			BasicGame.viewY = (this.scale.height/2 - window.innerHeight/2 - 1)*this.scale.scaleFactor.y;
@@ -70,7 +70,7 @@ BasicGame.Boot.prototype = {
 //			BasicGame.viewWidth = BasicGame.gameWidth;
 //			BasicGame.viewHeight = BasicGame.gameHeight;
 //		}
-	
+
 		document.getElementById("game").style.width = window.innerWidth+"px";
 		document.getElementById("game").style.height = window.innerHeight-1+"px";//The css for body includes 1px top margin, I believe this is the cause for this -1
 		document.getElementById("game").style.overflow = "hidden";
@@ -97,7 +97,7 @@ BasicGame.Boot.prototype = {
         BasicGame.orientated = true;
 
         document.getElementById('orientation').style.display = 'none';
-        
+
 		this.scaleStage();
     }
 

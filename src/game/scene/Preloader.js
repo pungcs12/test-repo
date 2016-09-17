@@ -16,9 +16,9 @@ BasicGame.Preloader.prototype = {
 		//this.background = this.add.sprite(0, 0, 'preloaderBackground');
 		//this.preloadBar = this.add.sprite(300, 400, 'preloaderBar');
 
-		
+
 		//this.load.setPreloadSprite(this.preloadBar);
-		
+
 		//this.load.image('bg','assets/'+BasicGame.screen+"/bg.jpg");
         console.log(BasicGame.screen);
         this.load.image('bg','assets/'+BasicGame.screen+"/Screen2.png");
@@ -30,7 +30,12 @@ BasicGame.Preloader.prototype = {
         this.load.image('SymbolRose','assets/'+BasicGame.screen+"/SymRose.png");
         this.load.image('SymbolShoes','assets/'+BasicGame.screen+"/SymShoes.png");
         this.load.image('SymbolWild','assets/'+BasicGame.screen+"/SymWild.png");
-        
+        this.load.spritesheet('AniPic1','assets/'+BasicGame.screen+"/AniPic1_02.png",140,110,19);
+				this.load.image('BtnSpin','assets/'+BasicGame.screen+"/btn_spin.png");
+				this.load.image('BtnStop','assets/'+BasicGame.screen+"/btn_stop.png");
+				this.load.image('TestSymbol','assets/'+BasicGame.screen+"/TestSymbol146x124.png");
+				this.load.atlasJSONHash('MyPic1', 'assets/'+BasicGame.screen+'/AniPackPic1.png', 'assets/'+BasicGame.screen+'/AniPackPic1.json');
+
         this.load.image('TopLayer','assets/'+BasicGame.screen+"/TopLayer.png");
 	},
 
