@@ -286,27 +286,27 @@ Texas.GameSlotplay.prototype = {
  	 StopRow1: function(){
  		 console.log("--------Colume 1-------");
  		 this.SYMRow1.forEach(function(item,index){
- 				 if(item.y < 96){
+ 				 if(item.y < 133){
  					 item.moves = false;
  					 this.game.add.tween(item).to({y: -84}, 1000,Phaser.Easing.Elastic.Out,false).start();
  					 //this.SymbolAfterSpin[0][0] = item.key; //[row][col]
  				 }
- 				 else if(item.y >= 96 && item.y < 294){
+ 				 else if(item.y >= 133 && item.y < 331){
  					 item.moves = false;
  					 this.game.add.tween(item).to({y: 114}, 1000,Phaser.Easing.Elastic.Out,false).start();
  					 //this.SymbolAfterSpin[1][0] = item.key;
  				 }
- 				 else if(item.y >= 294 && item.y < 492){
+ 				 else if(item.y >= 331 && item.y < 529){
  					 item.moves = false;
  					 this.game.add.tween(item).to({y: 312}, 1000,Phaser.Easing.Elastic.Out,false).start();
  					 //this.SymbolAfterSpin[2][0] = item.key;
  				 }
- 				 else if(item.y >= 492 && item.y < 690){
+ 				 else if(item.y >= 529 && item.y < 727){
  					 item.moves = false;
  					 this.game.add.tween(item).to({y: 510}, 1000,Phaser.Easing.Elastic.Out,false).start();
  					 //this.SymbolAfterSpin[3][0] = item.key;
  				 }
- 				 else if(item.y >= 690){
+ 				 else if(item.y >= 727){
  					 item.moves = false;
  					 this.game.add.tween(item).to({y: 708}, 1000,Phaser.Easing.Elastic.Out,false).start();
  					 //this.SymbolAfterSpin[4][0] = item.key;
@@ -322,27 +322,27 @@ Texas.GameSlotplay.prototype = {
   StopRow2: function(){
     console.log("--------Colume 1-------");
     this.SYMRow2.forEach(function(item,index){
-        if(item.y < 96){
+        if(item.y < 133){
           item.moves = false;
           this.game.add.tween(item).to({y: -84}, 1000,Phaser.Easing.Elastic.Out,false).start();
           //this.SymbolAfterSpin[0][0] = item.key; //[row][col]
         }
-        else if(item.y >= 96 && item.y < 294){
+        else if(item.y >= 133 && item.y < 331){
           item.moves = false;
           this.game.add.tween(item).to({y: 114}, 1000,Phaser.Easing.Elastic.Out,false).start();
           //this.SymbolAfterSpin[1][0] = item.key;
         }
-        else if(item.y >= 294 && item.y < 492){
+        else if(item.y >= 331 && item.y < 529){
           item.moves = false;
           this.game.add.tween(item).to({y: 312}, 1000,Phaser.Easing.Elastic.Out,false).start();
           //this.SymbolAfterSpin[2][0] = item.key;
         }
-        else if(item.y >= 492 && item.y < 690){
+        else if(item.y >= 529 && item.y < 727){
           item.moves = false;
           this.game.add.tween(item).to({y: 510}, 1000,Phaser.Easing.Elastic.Out,false).start();
           //this.SymbolAfterSpin[3][0] = item.key;
         }
-        else if(item.y >= 690){
+        else if(item.y >= 727){
           item.moves = false;
           this.game.add.tween(item).to({y: 708}, 1000,Phaser.Easing.Elastic.Out,false).start();
           //this.SymbolAfterSpin[4][0] = item.key;
@@ -357,27 +357,27 @@ Texas.GameSlotplay.prototype = {
  StopRow3: function(){
    console.log("--------Colume 1-------");
    this.SYMRow3.forEach(function(item,index){
-       if(item.y < 96){
+       if(item.y < 133){
          item.moves = false;
          this.game.add.tween(item).to({y: -84}, 1000,Phaser.Easing.Elastic.Out,false).start();
          //this.SymbolAfterSpin[0][0] = item.key; //[row][col]
        }
-       else if(item.y >= 96 && item.y < 294){
+       else if(item.y >= 133 && item.y < 331){
          item.moves = false;
          this.game.add.tween(item).to({y: 114}, 1000,Phaser.Easing.Elastic.Out,false).start();
          //this.SymbolAfterSpin[1][0] = item.key;
        }
-       else if(item.y >= 294 && item.y < 492){
+       else if(item.y >= 331 && item.y < 529){
          item.moves = false;
          this.game.add.tween(item).to({y: 312}, 1000,Phaser.Easing.Elastic.Out,false).start();
          //this.SymbolAfterSpin[2][0] = item.key;
        }
-       else if(item.y >= 492 && item.y < 690){
+       else if(item.y >= 529 && item.y < 727){
          item.moves = false;
          this.game.add.tween(item).to({y: 510}, 1000,Phaser.Easing.Elastic.Out,false).start();
          //this.SymbolAfterSpin[3][0] = item.key;
        }
-       else if(item.y >= 690){
+       else if(item.y >= 727){
          item.moves = false;
          this.game.add.tween(item).to({y: 708}, 1000,Phaser.Easing.Elastic.Out,false).start();
          //this.SymbolAfterSpin[4][0] = item.key;
@@ -392,27 +392,27 @@ Texas.GameSlotplay.prototype = {
 StopRow4: function(){
   console.log("--------Colume 1-------");
   this.SYMRow4.forEach(function(item,index){
-      if(item.y < 96){
+      if(item.y < 133){
         item.moves = false;
         this.game.add.tween(item).to({y: -84}, 1000,Phaser.Easing.Elastic.Out,false).start();
         //this.SymbolAfterSpin[0][0] = item.key; //[row][col]
       }
-      else if(item.y >= 96 && item.y < 294){
+      else if(item.y >= 133 && item.y < 331){
         item.moves = false;
         this.game.add.tween(item).to({y: 114}, 1000,Phaser.Easing.Elastic.Out,false).start();
         //this.SymbolAfterSpin[1][0] = item.key;
       }
-      else if(item.y >= 294 && item.y < 492){
+      else if(item.y >= 331 && item.y < 529){
         item.moves = false;
         this.game.add.tween(item).to({y: 312}, 1000,Phaser.Easing.Elastic.Out,false).start();
         //this.SymbolAfterSpin[2][0] = item.key;
       }
-      else if(item.y >= 492 && item.y < 690){
+      else if(item.y >= 529 && item.y < 727){
         item.moves = false;
         this.game.add.tween(item).to({y: 510}, 1000,Phaser.Easing.Elastic.Out,false).start();
         //this.SymbolAfterSpin[3][0] = item.key;
       }
-      else if(item.y >= 690){
+      else if(item.y >= 727){
         item.moves = false;
         this.game.add.tween(item).to({y: 708}, 1000,Phaser.Easing.Elastic.Out,false).start();
         //this.SymbolAfterSpin[4][0] = item.key;
@@ -427,27 +427,27 @@ StopSpinRow5: function(){
 StopRow5: function(){
  console.log("--------Colume 1-------");
  this.SYMRow5.forEach(function(item,index){
-     if(item.y < 96){
+     if(item.y < 133){
        item.moves = false;
        this.game.add.tween(item).to({y: -84}, 1000,Phaser.Easing.Elastic.Out,false).start();
        //this.SymbolAfterSpin[0][0] = item.key; //[row][col]
      }
-     else if(item.y >= 96 && item.y < 294){
+     else if(item.y >= 133 && item.y < 331){
        item.moves = false;
        this.game.add.tween(item).to({y: 114}, 1000,Phaser.Easing.Elastic.Out,false).start();
        //this.SymbolAfterSpin[1][0] = item.key;
      }
-     else if(item.y >= 294 && item.y < 492){
+     else if(item.y >= 331 && item.y < 529){
        item.moves = false;
        this.game.add.tween(item).to({y: 312}, 1000,Phaser.Easing.Elastic.Out,false).start();
        //this.SymbolAfterSpin[2][0] = item.key;
      }
-     else if(item.y >= 492 && item.y < 690){
+     else if(item.y >= 529 && item.y < 727){
        item.moves = false;
        this.game.add.tween(item).to({y: 510}, 1000,Phaser.Easing.Elastic.Out,false).start();
        //this.SymbolAfterSpin[3][0] = item.key;
      }
-     else if(item.y >= 690){
+     else if(item.y >= 727){
        item.moves = false;
        this.game.add.tween(item).to({y: 708}, 1000,Phaser.Easing.Elastic.Out,false).start();
        //this.SymbolAfterSpin[4][0] = item.key;
