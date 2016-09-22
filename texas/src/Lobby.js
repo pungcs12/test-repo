@@ -129,8 +129,8 @@ Texas.Lobby = function (game) {
         mouseClick = this.add.audio('mouseClick');
 
         //play BGM and ambient..
-        //bgm.loopFull(1);
-        //ambience.loopFull(1);
+        bgm.loopFull(1);
+        ambience.loopFull(1);
 
         // block++;
         // this.createRoom(block,roomHolderBetMinimumBet, roomHolderBetGold, roomHolderBetCreateRoom, roomHolderBetEnterRoom,roomHolderBetTableText, roomHolderBetTableCurrentBet, roomHolderBetTableMaxBet);
