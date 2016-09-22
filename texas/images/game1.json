@@ -1,0 +1,20 @@
+{"frames": {
+
+"playerFrame.png":
+{
+	"frame": {"x":1,"y":1,"w":681,"h":327},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":681,"h":327},
+	"sourceSize": {"w":681,"h":327}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "game1.png",
+	"format": "RGBA8888",
+	"size": {"w":1024,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:894314acebb3d23cff94e1437c2b3eba:b55e5bf3c45f737590575e33f18e5d1c:aaa71ef56b0af97245f2a146ae132e38$"
+}
+}
