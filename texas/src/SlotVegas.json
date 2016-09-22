@@ -1,0 +1,92 @@
+{"frames": {
+
+"Backround_Mask.png":
+{
+	"frame": {"x":0,"y":330,"w":1920,"h":1080},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1920,"h":1080},
+	"sourceSize": {"w":1920,"h":1080}
+},
+"Pic1.png":
+{
+	"frame": {"x":1321,"y":0,"w":332,"h":210},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":332,"h":210},
+	"sourceSize": {"w":332,"h":210}
+},
+"SpinBoxBG.png":
+{
+	"frame": {"x":0,"y":211,"w":383,"h":119},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":383,"h":119},
+	"sourceSize": {"w":383,"h":119}
+},
+"SpinBoxBTN.png":
+{
+	"frame": {"x":0,"y":0,"w":121,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":121,"h":50},
+	"sourceSize": {"w":121,"h":50}
+},
+"SymRose.png":
+{
+	"frame": {"x":121,"y":0,"w":181,"h":159},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":181,"h":159},
+	"sourceSize": {"w":181,"h":159}
+},
+"SymShoes.png":
+{
+	"frame": {"x":514,"y":0,"w":218,"h":175},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":218,"h":175},
+	"sourceSize": {"w":218,"h":175}
+},
+"SymStocking.png":
+{
+	"frame": {"x":302,"y":0,"w":212,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":212,"h":198},
+	"sourceSize": {"w":212,"h":198}
+},
+"SymVegas.png":
+{
+	"frame": {"x":1653,"y":0,"w":333,"h":211},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":333,"h":211},
+	"sourceSize": {"w":333,"h":211}
+},
+"SymWild.png":
+{
+	"frame": {"x":1017,"y":0,"w":304,"h":211},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":304,"h":211},
+	"sourceSize": {"w":304,"h":211}
+},
+"Top_Hat_Girl.png":
+{
+	"frame": {"x":732,"y":0,"w":285,"h":198},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":285,"h":198},
+	"sourceSize": {"w":285,"h":198}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "SlotVegas.png",
+	"format": "RGBA8888",
+	"size": {"w":1986,"h":1410},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:330530c13cdd01e8fe0be71df03b95b2:30f0149a8084c287b3c3d69c157400b8:efa7ab30559518fdf00083a932ece3af$"
+}
+}
